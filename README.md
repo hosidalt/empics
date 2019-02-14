@@ -1,24 +1,58 @@
-# README
+## userテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false
+|name|string|null: false
+|e-mail|string|null: false, unique: true
+|picture_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
 
-Things you may want to cover:
+### Association
+- has_many :pictures
+- has_many :categories
 
-* Ruby version
 
-* System dependencies
+## pictuerテーブル
 
-* Configuration
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false
+|image|string|
+|comment|text|
+|user_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
 
-* Database creation
+### Association
+- has_many :categories
+- has_many :tags
+- belongs_to :user
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## categoryテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false
+|grouop_name|string|null: false
+|picture_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
-* ...
+### Association
+- has_many :pictures
+- has_many :tags
+- belongs_to :user
+
+
+## tagsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|picture_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :picture
+- belongs_to :category
+
