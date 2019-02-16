@@ -1,0 +1,54 @@
+.side
+  .user-side
+    .user-side__content
+      .user-name
+        yoshida
+      / = link_to edit_user_path, class: 'edit-user' do
+      %a.edit-user{:href => ""}
+        %i.fa.fa-cog
+      / = link_to new_picture_path, class: 'new-picture' do
+      %a.new-pictuer{:href => ""}
+        %i.fa.fa-image
+
+  .select-side
+    .list
+      .list__categories
+        .categories-tag
+          %select{:name => "tags"}
+            %option{:value => "all"} 全て
+        .category-edit
+          %button.category-add{:href =>""}追加
+          / = button_to "追加", class: 'category-add'
+          %button.category-delete{:href =>""}削除
+          / = button_to "削除", class: 'category-delete'
+
+      .list__categories
+        .categories-tag
+          %select{:name => "tags"}
+            %option{:value => "all"} 全て
+        .category-edit
+          %button.category-add{:href =>""}追加
+          / = button_to "追加", class: 'category-add'
+          %button.category-delete{:href =>""}削除
+          / = button_to "削除", class: 'category-delete'
+
+
+
+.main
+  .header
+    .header__category.clearfix
+      .category__name
+        Animal
+    .tag__name
+      tags:
+
+  .pictures__content
+    .pictures__list
+    .oder__form
+      %select{:name => "data"}
+        %option{:value => "日付順"} 日付順
+        %option{:value => "変更順"} 変更順
+        %option{:value => "五十音順"} 五十音順
+        %option{:value => "アルファベット順"} アルファベット順
+
+
