@@ -1,0 +1,32 @@
+.side
+  .user-side
+    .user-side__content
+      .user-name
+        =current_user.name
+      = link_to edit_user_path(current_user), class: 'edit-user' do
+        %i.fa.fa-cog
+      / = link_to new_picture_path, class: 'new-picture' do
+      %a.new-pictuer{:href => ""}
+        %i.fa.fa-image
+
+  .select-side
+    .list
+      .list__categories
+        .categories-tag
+          %select{:name => "tags"}
+            %option{:value => "all"} 全て
+        .category-edit
+          %button.category-add{:href =>""}追加
+          / = button_to "追加", class: 'category-add'
+          %button.category-delete{:href =>""}削除
+          / = button_to "削除", class: 'category-delete'
+
+      .list__categories
+        .categories-tag
+          %select{:name => "tags"}
+            %option{:value => "all"} 全て
+        .category-edit
+          %button.category-add{:href =>""}追加
+          / = button_to "追加", class: 'category-add'
+          %button.category-delete{:href =>""}削除
+          / = button_to "削除", class: 'category-delete'

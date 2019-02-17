@@ -5,7 +5,7 @@
 
   .user-side {
     background-color: #253141;
-    height: 15%;
+    height: 100px;
     width: 260px;
     padding: 0 20px;
     position: relative;
@@ -41,7 +41,7 @@
   .select-side {
     background-color: #2f3e51;
     width: 260px;
-    height: 85%;
+    height: 100%;
     padding: 0 20px;
     overflow: scroll;
     .list {
@@ -73,7 +73,7 @@
   width: calc(100vw - 300px);
   float: left;
   .header{
-    height: 15% ;
+    height: 100px;
     background-color: #FFFFFF;
     &__category {
       padding: 0 40px;
@@ -83,22 +83,21 @@
         margin: 35px 0 15px;
         float: left;
       }
-    }
-    .tag__name {
+      .tag__name {
       font-size: 12px;
       color: #999999;
-      padding: 0 40px;
+      margin-top: 15px;
       clear: both;
+      }
     }
   }
 
   .pictures__content {
     background-color: #EEEEEE;
-    height: calc(100vh - 15% );
+    height: 100%;
     padding: 0 40px;
     overflow: scroll;
     &__list {
-
     }
     .oder__form{
       padding: 20px 0;
