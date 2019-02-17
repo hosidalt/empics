@@ -1,0 +1,22 @@
+= render partial: 'shared/side'
+
+
+.main
+  .header
+    .header__category.clearfix
+      .category__name
+        Animal
+      .tag__name
+        tags:
+
+  .pictures__content
+    .oder__form
+      %select{:name => "data"}
+        %option{:value => "日付順"} 日付順
+        %option{:value => "変更順"} 変更順
+        %option{:value => "五十音順"} 五十音順
+        %option{:value => "アルファベット順"} アルファベット順
+    .pictures__list
+      %img{:src => "/images/cat.jpg"}
+
+
