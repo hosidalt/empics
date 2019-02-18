@@ -50,6 +50,13 @@
       &__categories {
         padding: 40px 20px;
         .categories-tag {
+          .block__category-form {
+            display: inline-block;
+          }
+          .block__search-result {
+            float: right;
+            display: inline-block;
+          }
         }
         .category-edit {
           position: absolute;
