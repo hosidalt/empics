@@ -13,8 +13,11 @@
     .list
       .list__categories
         .categories-tag
-          %select{:name => "tags"}
-            %option{:value => "all"} 全て
+          .block__category-form
+            %select.search-form{:name => "tags"}
+              %option{:value => "all"} 全て
+          .block__search-result
+            %button.search-result{:href =>""}検索
         .category-edit
           %button.category-add{:href =>""}追加
           / = button_to "追加", class: 'category-add'
