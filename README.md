@@ -35,7 +35,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false
-|grouop_name|string|null: false
+|category_name|string|null: false
 |picture_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 
