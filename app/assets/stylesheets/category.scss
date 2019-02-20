@@ -1,0 +1,52 @@
+.new-image__field {
+  width: 980px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .category-form__field {
+    margin-top: 30px;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .category-form__field--left {
+      float: left;
+      width: 30%;
+      padding-right: 40px;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+
+    .category-form__field--right {
+      float: right;
+      width: 70%;
+    }
+
+    .category-form__label {
+      display: block;
+      line-height: 50px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .category-form__input {
+      float: left;
+      width: 100%;
+      line-height: 30px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+    }
+  }
+}

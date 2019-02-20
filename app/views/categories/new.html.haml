@@ -1,0 +1,44 @@
+= form_for @category do |f|
+  .new-image__field
+    %h1 新規画像
+    .category-form__field
+      .category-form__field--left
+        タグ
+        / =f.label :name, class 'category-form__label'
+      .category-form__field--right
+        =f.text_field :name, class: 'category_name category-form__input',placeholder: 'タグ名を入力してください'
+
+          .category-picture.clearfix
+            %input.category-pictures{name: "picture[category_ids][]", type: "hidden", value: category.id}
+            %p.picture-category__name= category.name
+            %a.category-remove.picture-category__btn 削除
+
+    / = form_for [@category, @picture] do |f|
+    /   =f.label :image, class: "image-form" do
+    /     =f.file_field :image, class: "image"
+
+
+
+    / .show-image
+    /   %img.image{:src => ""}
+
+
+
+
+
+
+
+/   <input type="file" name="media[]" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/x-m4v" multiple="" class="file-input js-tooltip" data-original-title="画像/動画を追加" data-delay="150">
+
+
+
+/ <div class="contents row">
+/   <%= form_tag('/tweets', method: :post) do %>
+/     <h3>
+/       投稿する
+/     </h3>
+/     <input placeholder="Image URL" type="text" name="image" autofocus="true">
+/     <textarea placeholder="text" name="text" cols="30" rows="10"></textarea>
+/     <input type="submit" value="SENT">
+/   <% end %>
+/ </div>
